@@ -134,7 +134,7 @@ export default function weatherReduser(state = initialState, action) {
                     showBtnAdd = false;
                 }
             });
-
+            newRenders.CityList.needUpdate = true;
             newRenders.WeatherInfo.needUpdate = true;
             return {...state,
                 cities: state.cities,
@@ -163,6 +163,7 @@ export default function weatherReduser(state = initialState, action) {
 
         case "ERROR_LOADING_WEATHER":
 
+            newRenders.CityList.needUpdate = true;
             newRenders.NewCityPage.needUpdate = true;
             newRenders.WeatherInfo.needUpdate = true;
 
@@ -176,6 +177,7 @@ export default function weatherReduser(state = initialState, action) {
                 showBtnAdd: false,
                 cityName: "",
                 renders: newRenders,
+                showCitiesList: false,
             };
 
         case "CREATE_CITY_PAGE":
