@@ -1,0 +1,239 @@
+.h100 {
+  height: 100%;
+  width: 1px;
+  display: inline-block;
+  vertical-align: middle;
+}
+#weather {
+  width: 1000px;
+  margin: 0 auto;
+  padding: 0px;
+  background: #9fcff9;
+  line-height: 120%;
+  font-size: 14px;
+  min-width: 300px;
+}
+@media (max-width: 1000px) {
+  #weather {
+    width: 100%;
+  }
+}
+#weather .header {
+  overflow: hidden;
+}
+#weather .header h1 {
+  font-size: 20px;
+  margin: 10px 20px;
+  font-weight: bold;
+}
+#weather .selectionCity {
+  padding: 10px;
+  border-bottom: 2px solid #000b7b;
+}
+#weather .selectionCity .cityList {
+  display: inline-block;
+  margin: 10px;
+  vertical-align: bottom;
+  position: relative;
+}
+@media (max-width: 600px) {
+  #weather .selectionCity .cityList {
+    display: block;
+  }
+}
+#weather .selectionCity .cityList .showCitiesBtn {
+  background: #ee3400;
+  color: #fff;
+  padding: 10px;
+  font-weight: bold;
+  transition: all 0.2s;
+  cursor: pointer;
+  text-align: center;
+}
+#weather .selectionCity .cityList .showCitiesBtn:hover {
+  background: #cf1500;
+}
+#weather .selectionCity .cityList .list {
+  position: absolute;
+  top: 100%;
+  left: 0px;
+  background: #0014ce;
+  min-width: 100%;
+  z-index: 999;
+}
+#weather .selectionCity .cityList .list .cityBtn {
+  display: block;
+  padding: 7px;
+  color: #fff;
+  cursor: pointer;
+  border-bottom: 2px solid #9fcff9;
+  position: relative;
+  padding-right: 25px;
+  box-sizing: border-box;
+}
+#weather .selectionCity .cityList .list .cityBtn:hover,
+#weather .selectionCity .cityList .list .cityBtn.active {
+  background: #000b7b;
+}
+#weather .selectionCity .cityList .list .cityBtn .delCity {
+  position: absolute;
+  right: 5px;
+  top: 5px;
+  width: 20px;
+  height: 20px;
+}
+#weather .selectionCity .cityList .list .newCity {
+  font-weight: bold;
+  background: #000d48;
+  border-bottom: 2px solid #000b7b;
+}
+#weather .selectionCity .searchByCityName {
+  display: inline-block;
+  margin: 10px;
+  vertical-align: bottom;
+}
+@media (max-width: 600px) {
+  #weather .selectionCity .searchByCityName {
+    display: block;
+  }
+}
+#weather .selectionCity .searchByCityName label {
+  display: block;
+  font-size: 12px;
+  margin: 0px;
+}
+#weather .selectionCity .searchByCityName input {
+  padding: 8px;
+  border-radius: 0;
+  box-sizing: border-box;
+  border: 2px solid #ee3400;
+  display: inline-block;
+  vertical-align: top;
+}
+@media (max-width: 600px) {
+  #weather .selectionCity .searchByCityName input {
+    width: calc(100% - 85px);
+  }
+}
+#weather .selectionCity .searchByCityName .searchCityBtn {
+  padding: 8px 10px;
+  border-radius: 0;
+  border: 2px solid #ee3400;
+  background: #ee3400;
+  color: #fff;
+  cursor: pointer;
+  font-weight: bold;
+  display: inline-block;
+  vertical-align: top;
+  text-align: center;
+}
+#weather .selectionCity .searchByCityName .searchCityBtn:hover {
+  background: #cf1500;
+  border: 2px solid #cf1500;
+}
+@media (max-width: 600px) {
+  #weather .selectionCity .searchByCityName .searchCityBtn {
+    width: 60px;
+  }
+}
+#weather .weatherContent {
+  padding: 10px 15px;
+}
+#weather .weatherContent h1 {
+  font-size: 20px;
+  font-weight: bold;
+}
+#weather .weatherInfo .info td {
+  padding: 10px 20px;
+  background: #0014ce;
+  color: #fff;
+  font-weight: bold;
+  border-radius: 5px;
+}
+#weather .weatherInfo .saveCity {
+  padding: 10px;
+  border-radius: 0;
+  background: #0014ce;
+  color: #fff;
+  cursor: pointer;
+  font-weight: bold;
+  display: inline-block;
+  vertical-align: top;
+  text-align: center;
+  margin: 10px 0px;
+}
+#weather .weatherInfo .saveCity:hover {
+  background: #000b7b;
+}
+#weather .weatherInfo .error {
+  color: #800;
+  font-weight: bold;
+  margin: 5px 0px;
+}
+#weather .createNewCity {
+  position: relative;
+}
+#weather .createNewCity label {
+  font-size: 12px;
+  margin: 0px;
+}
+#weather .createNewCity #addCity {
+  padding: 8px;
+  border-radius: 0;
+  box-sizing: border-box;
+  border: 2px solid #0014ce;
+  display: inline-block;
+  vertical-align: top;
+}
+#weather .createNewCity .saveCity {
+  padding: 10px;
+  border-radius: 0;
+  background: #0014ce;
+  color: #fff;
+  cursor: pointer;
+  font-weight: bold;
+  display: inline-block;
+  vertical-align: top;
+  text-align: center;
+  margin: 10px 0px;
+}
+#weather .createNewCity .saveCity:hover {
+  background: #000b7b;
+}
+#weather .createNewCity .error {
+  color: #800;
+  font-weight: bold;
+  margin: 5px 0px;
+}
+#weather .createNewCity .LoadContent {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+#weather .LoadContent {
+  height: 220px;
+  background: rgba(0, 0, 0, 0.5);
+  top: 0;
+  left: 0;
+  text-align: center;
+}
+#weather .LoadContent span.spin {
+  border: 3px solid transparent;
+  border-top-color: #99ba40;
+  border-left-color: #99ba40;
+  display: inline-block;
+  vertical-align: middle;
+  width: 36px;
+  height: 36px;
+  border-radius: 21px;
+  animation: App-load-spin 1s infinite linear;
+}
+@keyframes App-load-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+/*# sourceMappingURL=App.css.map */
